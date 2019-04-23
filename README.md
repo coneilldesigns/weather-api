@@ -20,6 +20,8 @@ SCSS processing is being done by node-sass, and there is also appropriate error 
 
 (Disclaimer: There is a restriction on asking for location on page load https://developers.google.com/web/tools/lighthouse/audits/geolocation-on-load, a button was added so the geolocate is initiated by the user. The build of this project can only fetch your location on secure HTTPS connections).
 
+Live build is here: https://sidewalkhustle.com/weather-api/
+
 ### Project Details
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

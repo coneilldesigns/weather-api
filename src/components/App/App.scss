@@ -36,13 +36,8 @@
     font-size: 17px;
   }
   h1 {
-    font-size: 60px;
+    font-size: 61px;
     text-align: left;
-    span {
-      display: block;
-      width: 100%;
-      text-align: left;
-    }
   }
 }
 
@@ -107,7 +102,7 @@
   /* IE6-9 */
   background-size: cover;
   background-repeat: no-repeat;
-  padding: 20px 10px 10px 10px;
+  padding: 20px 10px 17px;
 
   h1 {
     margin: 0;
@@ -119,7 +114,7 @@
 
   .date {
     margin-top: -7px;
-    margin-bottom: 39px;
+    margin-bottom: 47px;
     h3 {
       font-size: 36px;
       margin: 0;
@@ -127,14 +122,24 @@
     }
     p {
       font-size: 12px;
+      margin-bottom: 0px;
     }
   }
   .city {
     font-size: 16px;
     margin: 0;
+    line-height: 13px;
   }
   .maintemp {
     margin-top: -7px;
+    span {
+      display: block;
+      width: 100%;
+      text-align: left;
+      margin-top: -5px;
+      font-size: 11px;
+      margin-left: 2px;
+    }
   }
   .list-inline {
     margin: -10px 0 0 0;
@@ -147,12 +152,13 @@
     p {
       margin: 0;
       padding: 0;
+      font-size: 16px;
     }
 
     .img-icon {
       margin-right: 10px;
       img {
-        transform: scale(1.2);
+        width: 100%;
       }
     }
     &:after {
@@ -228,9 +234,15 @@
   .city {
     text-align: center !important;
   }
+  .maintemp {
+    margin-bottom: 20px;
+    span {
+      text-align: center !important;
+    }
+  }
   .card {
     .date {
-      margin-top: 5px;
+      margin-top: 0px !important;
       margin-bottom: 20px !important;
       p {
         font-size: 10px;

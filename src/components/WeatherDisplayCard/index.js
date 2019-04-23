@@ -28,6 +28,8 @@ const WeatherDisplayCard = props => {
   // Format Latest Update
   var newLatestUpdate = formatDate(props.lastUpdate);
 
+  var newTemp = tempUpdate(props.tempValue);
+
   return (
     <div className="card">
       <div className="card-body card-success">
@@ -46,11 +48,11 @@ const WeatherDisplayCard = props => {
               </ul>
               <div className="maintemp">
                 <h1>
-                  {props.tempValue}°{units}
-                  <span>
-                    Low: {props.tempMin} / High: {props.tempMax}
-                  </span>
+                  {newTemp}°{units}
                 </h1>
+                <span>
+                  Low: {props.tempMin} / High: {props.tempMax}
+                </span>
               </div>
             </div>
             <div className="col-lg-5 col-md-5 col-sm-12 col-xs-12 text-right">

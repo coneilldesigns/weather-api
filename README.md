@@ -16,7 +16,7 @@
 
 This app uses multiple asynchronous API calls to fetch XML data, convert it to JSON. It uses Redux and Redux thunk to store the data client side for use until refreshed. Firstly, it uses geolocation to get users current position (lat and long), once that is established it will query the OpenWeather API for current weather data in your area and display it on the widget card. Asynchronously 2 more calls are made, one that gets the timezone based on the lat and long to display the correct offset time and another call to the Unsplash photo search API to get a background image based on your city and country name.
 
-SCSS processing is being done by node-sass, and there is also appropriate error states in order to give the user a good description of what is going on. This application is also fully mobile responsive using bootstrap media queries.
+SCSS processing is being done by node-sass, and there is also appropriate error states in order to give the user a good description of what is going on. This application is also fully mobile responsive using bootstrap media queries. It also takes into account accessibility standards.
 
 (Disclaimer: There is a restriction on asking for location on page load https://developers.google.com/web/tools/lighthouse/audits/geolocation-on-load, a button was added so the geolocate is initiated by the user. The build of this project can only fetch your location on secure HTTPS connections).
 

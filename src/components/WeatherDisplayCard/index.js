@@ -11,7 +11,7 @@ import {
 } from "../Helpers";
 
 const WeatherDisplayCard = props => {
-  //console.log("Props from Inside Weather Card: ", props);
+  console.log("Props from Inside Weather Card: ", props);
 
   // Fix Up Units
   var fixUnits = fixUnitsSomething(props.tempUnits);
@@ -59,7 +59,7 @@ const WeatherDisplayCard = props => {
                   <Clock
                     format={"h:mm:ss A"}
                     ticking={true}
-                    timezone={"America/Toronto"} //Timezone will go here
+                    timezone={props.timezone} //Timezone will go here
                   />
                 </h3>
                 <p>Last Update: {newLatestUpdate}</p>

@@ -70,6 +70,10 @@ class LocationDetection extends Component {
       this.props.fullRequestStatus.unsplashBackground === "success" &&
       this.props.fullRequestStatus.weatherStatus === "success"
     ) {
+      console.log(
+        "Props from the Weather app: ",
+        this.props.fullWeatherData.timezoneInfo.timezoneId._text
+      );
       return (
         <div className="row text-light">
           <div className="col-12">
@@ -115,6 +119,9 @@ class LocationDetection extends Component {
               lastUpdate={
                 this.props.fullWeatherData.locationInfo.lastupdate._attributes
                   .value
+              }
+              timezone={
+                this.props.fullWeatherData.timezoneInfo.timezoneId._text
               }
             />
             <p className="ready-message mb-0 pb-0 btm-message">

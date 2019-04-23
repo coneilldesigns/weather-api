@@ -20,7 +20,7 @@ const WeatherDisplayCard = props => {
   if (!weatherIcon) {
     weatherIcon = "03d";
   }
-  const iconUrl = `http://openweathermap.org/img/w/${weatherIcon}.png`;
+  const iconUrl = `https://openweathermap.org/img/w/${weatherIcon}.png`;
 
   // Capitalize Weather Title
   var newWeatherTitle = toTitleCase(props.weatherType);

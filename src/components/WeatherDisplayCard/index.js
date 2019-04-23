@@ -11,7 +11,7 @@ import {
 } from "../Helpers";
 
 const WeatherDisplayCard = props => {
-  console.log("Props from Inside Weather Card: ", props);
+  //console.log("Props from Inside Weather Card: ", props);
 
   // Fix Up Units
   var fixUnits = fixUnitsSomething(props.tempUnits);

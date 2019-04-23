@@ -70,10 +70,10 @@ class LocationDetection extends Component {
       this.props.fullRequestStatus.unsplashBackground === "success" &&
       this.props.fullRequestStatus.weatherStatus === "success"
     ) {
-      console.log(
-        "Props from the Weather app: ",
-        this.props.fullWeatherData.timezoneInfo.timezoneId._text
-      );
+      // console.log(
+      //   "Props from the Weather app: ",
+      //   this.props.fullWeatherData.timezoneInfo.timezoneId._text
+      // );
       return (
         <div className="row text-light">
           <div className="col-12">

@@ -25,7 +25,7 @@ class LocationDetection extends Component {
             <div className="spinner-holder">
               <div className="spinner-grow" role="status" />
             </div>
-            Getting Location
+            <p className="ready-message">Getting Location...</p>
           </div>
         </div>
       );
@@ -37,7 +37,7 @@ class LocationDetection extends Component {
             <div className="spinner-holder">
               <div className="spinner-grow" role="status" />
             </div>
-            Getting Timezone
+            <p className="ready-message">Getting Timezone...</p>
           </div>
         </div>
       );
@@ -49,7 +49,7 @@ class LocationDetection extends Component {
             <div className="spinner-holder">
               <div className="spinner-grow" role="status" />
             </div>
-            Getting Weather Data
+            <p className="ready-message">Getting Weather Data...</p>
           </div>
         </div>
       );
@@ -61,7 +61,7 @@ class LocationDetection extends Component {
             <div className="spinner-holder">
               <div className="spinner-grow" role="status" />
             </div>
-            Getting Background
+            <p className="ready-message">Getting a nice background...</p>
           </div>
         </div>
       );
@@ -163,10 +163,10 @@ class LocationDetection extends Component {
       return (
         <div className="row text-center text-light">
           <div className="col-12">
-            <p className="ready-message-2">
-              This application needs access to your location. <br />
-              Please ensure your Location Services are in enabled and you click
-              "Allow" on the browser prompt.
+            <p className="ready-message">
+              <i className="fa fa-map-marker" />
+              <br />
+              This application needs access to your location.
             </p>
             <div
               className="btn btn-secondary btn-xs"

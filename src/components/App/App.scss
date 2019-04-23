@@ -1,15 +1,22 @@
 @import "./Global.scss";
 
 .ready-message {
-  font-size: 10px;
-  text-align: center;
-  margin-top: 20px;
-}
-
-.ready-message-2 {
   font-size: 12px;
   text-align: center;
-  margin-top: 20px;
+  margin-top: 7px;
+  i {
+    font-size: 48px;
+    margin-bottom: 10px;
+  }
+}
+
+.list {
+  max-width: 300px;
+  margin: 10px auto 0;
+  li {
+    line-height: 21px;
+    color: #fff;
+  }
 }
 
 .card {

@@ -117,7 +117,7 @@ class LocationDetection extends Component {
                   .value
               }
             />
-            <p className="ready-message">
+            <p className="ready-message mb-0 pb-0 btm-message">
               Geo-Location, Timezone, Weather and Background Data Found &
               Stored!
             </p>

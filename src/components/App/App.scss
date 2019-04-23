@@ -193,6 +193,12 @@
 }
 
 @media (max-width: 767px) {
+  .btm-message {
+    padding: 0 30px;
+  }
+  .component-holder {
+    padding: 0 30px;
+  }
   .card-footer {
     text-align: center;
     .refresh {
@@ -225,7 +231,7 @@
   .card {
     .date {
       margin-top: 5px;
-      margin-bottom: 20px;
+      margin-bottom: 20px !important;
       p {
         font-size: 10px;
       }

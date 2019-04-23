@@ -2,7 +2,7 @@ import React from "react";
 import Clock from "react-live-clock";
 import RefreshButton from "../RefreshButton/";
 
-import { toTitleCase } from "../Helpers";
+import { toTitleCase, formatDate, tempUpdate } from "../Helpers";
 
 const WeatherDisplayCard = props => {
   //console.log("Props from Inside Weather Card: ", props);
@@ -25,6 +25,9 @@ const WeatherDisplayCard = props => {
   // Capitalize Weather Title
   var newWeatherTitle = toTitleCase(props.weatherType);
 
+  // Format Latest Update
+  var newLatestUpdate = formatDate(props.lastUpdate);
+
   return (
     <div className="card">
       <div className="card-body card-success">
@@ -43,7 +46,7 @@ const WeatherDisplayCard = props => {
               </ul>
               <div className="maintemp">
                 <h1>
-                  {props.tempValue}° {units}
+                  {props.tempValue}°{units}
                   <span>
                     Low: {props.tempMin} / High: {props.tempMax}
                   </span>
@@ -59,7 +62,7 @@ const WeatherDisplayCard = props => {
                     timezone={"America/Toronto"} //Timezone will go here
                   />
                 </h3>
-                <p>Last Update: {props.lastUpdate}</p>
+                <p>Last Update: {newLatestUpdate}</p>
               </div>
               <p className="city">
                 {props.city}, {props.countryCode}

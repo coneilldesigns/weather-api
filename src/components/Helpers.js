@@ -12,6 +12,12 @@ export function formatDate(date) {
   return dateString + " " + timeString;
 }
 
+export function tempUpdate(temp) {
+  var tempdone = temp.split("."),
+    string1 = tempdone[0];
+  return string1;
+}
+
 export function formatDateWithZeros() {
   var date = new Date();
   // Format Hours

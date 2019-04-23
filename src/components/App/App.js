@@ -6,6 +6,8 @@ import errorImage from "./error.jpg";
 import { connect } from "react-redux";
 import { fetchAllRequiredData } from "../../actions";
 
+import { backgroundFixer } from "../Helpers";
+
 //SCSS
 import "./App.scss";
 
@@ -13,14 +15,13 @@ class App extends Component {
   componentDidMount() {}
 
   render() {
-    // console.log(
-    //   "Props from the App Class: ",
-    //   this.props.fullRequestStatus.geolocationStatus
-    // );
-    var bg = this.props.fullWeatherData.backgroundInfo;
-    if (this.props.fullRequestStatus.geolocationStatus === "failed") {
-      var bg = errorImage;
-    }
+    // Choose Background if failed or success
+    var bg = backgroundFixer(
+      this.props.fullRequestStatus.geolocationStatus,
+      this.props.fullWeatherData.backgroundInfo,
+      errorImage
+    );
+
     return (
       <div className="root-inside">
         <div className="container h-100">

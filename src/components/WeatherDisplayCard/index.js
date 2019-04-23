@@ -2,25 +2,22 @@ import React from "react";
 import Clock from "react-live-clock";
 import RefreshButton from "../RefreshButton/";
 
-import { toTitleCase, formatDate, tempUpdate } from "../Helpers";
+import {
+  toTitleCase,
+  formatDate,
+  tempUpdate,
+  weatherIconFunc,
+  fixUnitsSomething
+} from "../Helpers";
 
 const WeatherDisplayCard = props => {
   //console.log("Props from Inside Weather Card: ", props);
 
   // Fix Up Units
-  var units = props.tempUnits;
-  if (units === "celsius") {
-    units = "C";
-  } else {
-    units = "F";
-  }
+  var fixUnits = fixUnitsSomething(props.tempUnits);
 
   // Fix Weather Icon
-  var weatherIcon = props.iconUrl;
-  if (!weatherIcon) {
-    weatherIcon = "03d";
-  }
-  const iconUrl = `https://openweathermap.org/img/w/${weatherIcon}.png`;
+  var weatherIcon = weatherIconFunc(props.iconUrl);
 
   // Capitalize Weather Title
   var newWeatherTitle = toTitleCase(props.weatherType);
@@ -28,6 +25,7 @@ const WeatherDisplayCard = props => {
   // Format Latest Update
   var newLatestUpdate = formatDate(props.lastUpdate);
 
+  // Format Temperature
   var newTemp = tempUpdate(props.tempValue);
 
   return (
@@ -39,7 +37,7 @@ const WeatherDisplayCard = props => {
               <ul className="list-inline">
                 <li>
                   <div className="img-icon">
-                    <img src={iconUrl} alt="" />
+                    <img src={weatherIcon} alt="" />
                   </div>
                 </li>
                 <li>
@@ -48,7 +46,7 @@ const WeatherDisplayCard = props => {
               </ul>
               <div className="maintemp">
                 <h1>
-                  {newTemp}°{units}
+                  {newTemp}°{fixUnits}
                 </h1>
                 <span>
                   Low: {props.tempMin} / High: {props.tempMax}

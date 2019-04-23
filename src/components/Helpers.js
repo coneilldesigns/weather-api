@@ -18,6 +18,31 @@ export function tempUpdate(temp) {
   return string1;
 }
 
+export function fixUnitsSomething(units) {
+  if (units === "celsius") {
+    units = "C";
+  } else {
+    units = "F";
+  }
+  return units;
+}
+
+export function backgroundFixer(requestStatus, bgImg, errorImage) {
+  if (requestStatus === "failed") {
+    bgImg = errorImage;
+  }
+  return bgImg;
+}
+
+export function weatherIconFunc(icon) {
+  if (!icon) {
+    icon = "https://openweathermap.org/img/w/01n.png";
+  } else {
+    icon = `https://openweathermap.org/img/w/${icon}.png`;
+  }
+  return icon;
+}
+
 export function formatDateWithZeros() {
   var date = new Date();
   // Format Hours

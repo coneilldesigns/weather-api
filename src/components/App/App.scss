@@ -1,0 +1,221 @@
+@import "./Global.scss";
+
+.ready-message {
+  font-size: 10px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.ready-message-2 {
+  font-size: 12px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.card {
+  position: relative;
+  z-index: 99;
+  border-radius: 20px;
+  border: none;
+  box-shadow: 0px 7px 30px 2px rgba(0, 0, 0, 0.18);
+  color: #000;
+  max-width: 660px;
+  margin: 0 auto;
+  border-radius: 24px !important;
+  overflow: hidden;
+
+  ul > li {
+    font-size: 17px;
+  }
+  h1 {
+    font-size: 60px;
+    text-align: left;
+    span {
+      display: block;
+      width: 100%;
+      text-align: left;
+    }
+  }
+}
+
+.card-body {
+  width: 100%;
+  position: relative;
+}
+
+.container,
+.spinner-holder {
+  position: relative;
+  z-index: 99;
+}
+
+.loading-holder h6 {
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+}
+
+.card-body.card-error {
+  padding: 1.25rem 1.25rem 1rem 1.25rem;
+  color: #fff;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#a50200+0,cc0000+100 */
+  background: #a50200;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #a50200 0%, #cc0000 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #a50200 0%, #cc0000 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #a50200 0%, #cc0000 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a50200', endColorstr='#cc0000',GradientType=0 );
+  /* IE6-9 */
+  i {
+    font-size: 80px;
+    margin-top: 1px;
+  }
+  .failed-header {
+    margin: 0 0 5px 0;
+    padding: 0;
+    line-height: 52px;
+  }
+  h6 {
+    font-size: 14px;
+    font-weight: light;
+  }
+}
+
+.card-body.card-success {
+  color: #000;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,e5e5e5+100;White+3D */
+  background: #ffffff;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #ffffff 0%, #e5e5e5 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #ffffff 0%, #e5e5e5 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #ffffff 0%, #e5e5e5 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=0 );
+  /* IE6-9 */
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 20px 10px 10px 10px;
+
+  h1 {
+    margin: 0;
+    padding: 0;
+    span {
+      font-size: 10px;
+    }
+  }
+
+  .date {
+    margin-top: -7px;
+    margin-bottom: 39px;
+    h3 {
+      font-size: 36px;
+      margin: 0;
+      padding: 0;
+    }
+    p {
+      font-size: 12px;
+    }
+  }
+  .city {
+    font-size: 16px;
+    margin: 0;
+  }
+  .maintemp {
+    margin-top: -7px;
+  }
+  .list-inline {
+    margin: -10px 0 0 0;
+    padding: 0;
+
+    > li {
+      display: inline-block;
+      line-height: 50px;
+    }
+    p {
+      margin: 0;
+      padding: 0;
+    }
+
+    .img-icon {
+      margin-right: 10px;
+      img {
+        transform: scale(1.2);
+      }
+    }
+    &:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+  }
+}
+
+.card-footer {
+  font-size: 10px;
+  > div {
+    display: inline-block;
+  }
+  .refresh {
+    float: left;
+  }
+  .lat-lon {
+    float: right;
+    line-height: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+}
+
+@media (max-width: 767px) {
+  .card-footer {
+    text-align: center;
+    .refresh {
+      margin: 10px auto 14px;
+      float: none;
+    }
+    .lat-lon {
+      display: block;
+      width: 100%;
+    }
+  }
+  .card-body.card-error {
+    h1 {
+      font-size: 35px;
+    }
+    h6 {
+      text-align: center;
+    }
+  }
+  .card {
+    .card-body,
+    h1,
+    .date {
+      text-align: center !important;
+    }
+  }
+  .city {
+    text-align: center !important;
+  }
+  .card {
+    .date {
+      margin-top: 5px;
+      margin-bottom: 20px;
+      p {
+        font-size: 10px;
+      }
+    }
+    h1 {
+      font-size: 72px;
+      span {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}

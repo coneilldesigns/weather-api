@@ -21,7 +21,7 @@ class App extends Component {
       this.props.fullWeatherData.backgroundInfo,
       errorImage
     );
-
+    console.log(this.props.loadingObject);
     return (
       <div className="root-inside">
         <div className="container h-100">
@@ -39,7 +39,18 @@ class App extends Component {
             backgroundImage: `url(${bg})`
           }}
         />
-        <div className="overlay" />
+
+        <div
+          className={
+            "overlay " +
+            (this.props.loadingObject.GET_BACKGROUND ||
+            this.props.loadingObject.GET_GEOLOCATION ||
+            this.props.loadingObject.GET_TIMEZONE ||
+            this.props.loadingObject.GET_WEATHER
+              ? "deepen"
+              : "normal")
+          }
+        />
       </div>
     );
   }

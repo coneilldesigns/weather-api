@@ -12,7 +12,6 @@ import Thunk from "redux-thunk";
 import App from "./components/App/App";
 import reducers from "./reducers";
 import "bootstrap/dist/css/bootstrap.css";
-import "font-awesome/css/font-awesome.min.css";
 
 //Pass reducers into createStore along with Thunk to create global storage
 const store = createStore(reducers, applyMiddleware(Thunk));

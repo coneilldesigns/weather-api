@@ -20,7 +20,8 @@ class RefreshButton extends React.Component {
     return (
       <div>
         <button onClick={this.buttonClick}>
-          <i className="fa fa-refresh" aria-hidden="true" /> Refresh Weather
+          <i className="fa fa-sync-alt" />
+          Refresh Weather
         </button>
       </div>
     );

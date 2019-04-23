@@ -13,11 +13,10 @@ class App extends Component {
   componentDidMount() {}
 
   render() {
-    console.log(
-      "Props from the App Class: ",
-      this.props.fullRequestStatus.geolocationStatus
-    );
-
+    // console.log(
+    //   "Props from the App Class: ",
+    //   this.props.fullRequestStatus.geolocationStatus
+    // );
     var bg = this.props.fullWeatherData.backgroundInfo;
     if (this.props.fullRequestStatus.geolocationStatus === "failed") {
       var bg = errorImage;

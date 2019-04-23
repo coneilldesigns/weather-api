@@ -6,8 +6,6 @@ import RefreshAll from "../RefreshAll/";
 import { connect } from "react-redux";
 import { getGeoLocation } from "../../actions";
 
-//import { createLoadingSelector } from "../../apis/Selectors";
-
 class LocationDetection extends Component {
   componentDidMount() {}
 
@@ -164,7 +162,7 @@ class LocationDetection extends Component {
         <div className="row text-center text-light">
           <div className="col-12">
             <p className="ready-message">
-              <i className="fa fa-map-marker" />
+              <i className="fa fa-map-marker-alt" aria-hidden="true" />
               <br />
               This application needs access to your location.
             </p>

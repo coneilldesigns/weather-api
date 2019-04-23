@@ -9,7 +9,7 @@ class RefreshAll extends React.Component {
     return (
       <div>
         <button onClick={this.onRefreshClick}>
-          <i className="fa fa-refresh" aria-hidden="true" /> Refresh All
+          <i className="fa fa-sync-alt" /> Refresh All
         </button>
       </div>
     );
